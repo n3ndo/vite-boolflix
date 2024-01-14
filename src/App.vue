@@ -1,10 +1,12 @@
 <script>
 import AppHeader from './components/AppHeader.vue';
+import AppMain from './components/AppMain.vue';
 import axios from 'axios';
 import { store } from './store.js';
 export default {
   components:{
-    AppHeader
+    AppHeader,
+    AppMain
   },
   data() {
     return {
@@ -18,7 +20,7 @@ export default {
         apiUrl += `?api_key=${store.api_key}&query=${store.search}`;
       }
       axios.get(apiUrl).then((response) => {
-        store.movies = response.data.data;
+        store.movies = response.data.results;
         console.log(store.movies);
       })
     }
@@ -28,6 +30,7 @@ export default {
 <template lang="">
   <body>
     <AppHeader @search="getMoviesAndSeries"/>
+    <AppMain />
   </body>
 </template>
 <style lang="scss">

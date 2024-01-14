@@ -1,6 +1,13 @@
 <script>
+import { store } from '../store.js';
+
 export default {
-    
+    name: 'AppMain',
+    data() {
+        return {
+            store
+        }
+    }
 }
 </script>
 <template lang="">
@@ -8,6 +15,6 @@ export default {
         
     </div>
 </template>
-<style lang="">
+<style lang="scss" scoped>
     
 </style>

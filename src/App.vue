@@ -17,6 +17,7 @@ export default {
   },
   methods: {
     getMoviesAndSeries() {
+      this.movies = [];
       axios.get(this.store.movieEndpoint += `?api_key=${store.api_key}&query=${store.search}`).then((response) => {
         let movies_response = response.data.results;
         movies_response.forEach((elem) => {
@@ -33,6 +34,7 @@ export default {
         });
       })
 
+      this.series = [];
       axios.get(this.store.seriesEndpoint += `?api_key=${store.api_key}&query=${store.search}`).then((response) => {
         let series_response = response.data.results;
         series_response.forEach((elem) => {

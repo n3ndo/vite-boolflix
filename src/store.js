@@ -5,5 +5,5 @@ export const store = reactive({
     movies : [],
     tvSeries : [],
     search : '',
-    api_key : 'bed15c037451d61d3638b70f22e85aa7',
+    api_key : '50e720e23ae0f616a0d8a6ba8bcdeb7e',
 })

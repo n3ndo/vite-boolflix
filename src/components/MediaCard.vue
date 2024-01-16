@@ -6,9 +6,16 @@ export default {
     },
     data() {
         return {
-            store
+            store,
+            votes: this.media.vote,
         }
     },
+    methods: {
+        stars(vote){
+            const numStars = Math.ceil(vote / 2);
+            return '★'.repeat(numStars) + '☆'.repeat(5 - numStars);
+        }
+    }
 }
 </script>
 <template lang="">
@@ -18,7 +25,7 @@ export default {
                 <img :src="`https://image.tmdb.org/t/p/w185${media.image}`" alt="">
                 <h2>{{media.original_title}}</h2>
                 <h2>{{media.title}}</h2>
-                <h2>{{media.vote}}</h2>
+                <span>{{stars(media.vote)}}</span>
                 <span :class="{'fi': true, ['fi-' + media.original_language]: true}">
                 </span>
             </div>

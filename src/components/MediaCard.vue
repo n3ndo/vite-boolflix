@@ -66,6 +66,7 @@ export default {
             position: relative;
             perspective: 1000px;
             padding: 0px;
+            background-color: rgba(0, 0, 0, 0.5);
 
             .card-top {
                 position: relative;
@@ -100,7 +101,7 @@ export default {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0,0.9);
     color: white;
     padding: 10px;
     width: 100%;
@@ -113,11 +114,12 @@ export default {
     transition: opacity 1s ease;
 }
 
-.overlay-content{
+.overlay-content {
     text-align: center;
     max-height: 80%;
     overflow-y: auto;
 }
+
 .card:hover .overlay {
     opacity: 1;
 }

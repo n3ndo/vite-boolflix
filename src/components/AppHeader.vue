@@ -30,7 +30,7 @@ header {
     display: flex;
     flex-wrap: wrap;
     height: 75px;
-    background-color: rgb(20, 20, 20);
+    background-color: rgb(0, 0, 0);
 
 
     h1 {

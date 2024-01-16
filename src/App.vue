@@ -26,6 +26,7 @@ export default {
             image: elem.poster_path,
             title: elem.title,
             original_title: elem.original_title,
+            overview: elem.overview,
             vote: elem.vote_average,
             original_language: elem.original_language
           }
@@ -43,6 +44,7 @@ export default {
             image: elem.poster_path,
             title: elem.name,
             original_title: elem.original_name,
+            overview: elem.overview,
             vote: elem.vote_average,
             original_language: elem.original_language
           }

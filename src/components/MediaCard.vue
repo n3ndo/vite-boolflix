@@ -9,15 +9,13 @@ export default {
             store
         }
     },
-    methods: {
-
-    }
 }
 </script>
 <template lang="">
     <div class="text-white ">
         <div class="container-fluid">
             <div >
+                <img :src="`https://image.tmdb.org/t/p/w185${media.image}`" alt="">
                 <h2>{{media.original_title}}</h2>
                 <h2>{{media.title}}</h2>
                 <h2>{{media.vote}}</h2>

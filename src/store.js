@@ -6,7 +6,7 @@ export const store = reactive({
     movies : [],
     series : [],
     search : '',
-    api_key : '50e720e23ae0f616a0d8a6ba8bcdeb7e',
+    api_key : 'e8e8c7d0562028f13739da4efa361e4c',
     flags: {
         'it': 'url(./public/Flags_of_italy.svg.png)',
         'en': 'url(./public/inghilterra.png)',

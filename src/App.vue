@@ -22,7 +22,7 @@ export default {
         let movies_response = response.data.results;
         movies_response.forEach((elem) => {
           let obj = {
-            image: elem.backdrop_image,
+            image: elem.poster_path,
             title: elem.title,
             original_title: elem.original_title,
             vote: elem.vote_average,

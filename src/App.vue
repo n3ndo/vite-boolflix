@@ -20,6 +20,7 @@ export default {
       this.movies = [];
       axios.get(this.store.movieEndpoint += `?api_key=${store.api_key}&query=${store.search}`).then((response) => {
         let movies_response = response.data.results;
+        console.log(movies_response);
         movies_response.forEach((elem) => {
           let obj = {
             image: elem.poster_path,
@@ -30,7 +31,7 @@ export default {
           }
 
           this.movies.push(obj);
-          console.log(this.movies);
+
         });
       })
 
@@ -39,7 +40,7 @@ export default {
         let series_response = response.data.results;
         series_response.forEach((elem) => {
           let obj = {
-            image: elem.backdrop_image,
+            image: elem.poster_path,
             title: elem.name,
             original_title: elem.original_name,
             vote: elem.vote_average,
@@ -47,7 +48,6 @@ export default {
           }
 
           this.series.push(obj);
-          console.log(this.series);
         });
       })
     }
@@ -59,16 +59,26 @@ export default {
 <template lang="">
   <body>
     <AppHeader @search="getMoviesAndSeries"/>
-    <h3>FILM</h3>
-    <MediaCard v-for="movie, index in movies" :key="index" :media="movie"/>
-    <h3>SERIE TV</h3>
-    <MediaCard v-for="serie, index in series" :key="index" :media="serie"/>
+    <div class="container-fluid">
+      <div class="row">
+        <h3>FILM</h3>
+        <MediaCard v-for="movie, index in movies" :key="index" :media="movie"/>
+        <h3>SERIE TV</h3>
+        <MediaCard v-for="serie, index in series" :key="index" :media="serie"/>
+      </div>
+    </div>
   </body>
 </template>
 <style lang="scss">
 @use './styles/generals.scss';
 
 body {
-  background-color: rgb(67, 67, 67);
+  background-color: rgb(19, 19, 19);
+
+  h3 {
+    color: white;
+    font-size: 25px;
+    padding-left: 10px;
+  }
 }
 </style>

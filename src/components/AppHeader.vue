@@ -16,9 +16,8 @@ export default {
                 <div class="col-4 p-2">
                     <h1>BOOLFLIX</h1>
                 </div>
-                <div class="col-3 p-2 d-flex align-items-center">
-                    <input type="text" class="form-control" placeholder="Cerca..." v-model="store.search" id="search">
-                    <button class="btn btn-danger mx-2" @click="$emit('search')">Cerca</button>
+                <div class="col-2 p-2 me-2 d-flex align-items-center">
+                    <input type="text" class="form-control" placeholder="Cerca..." v-model="store.search" id="search" @keyup="$emit('search')">
                 </div>
             </div>
         </div>
@@ -31,7 +30,7 @@ header {
     display: flex;
     flex-wrap: wrap;
     height: 75px;
-    background-color: black;
+    background-color: rgb(20, 20, 20);
 
 
     h1 {
